@@ -7,6 +7,7 @@ import {
   useTransform,
   useReducedMotion,
 } from "framer-motion";
+import { useIsDesktop } from "@/lib/use-is-desktop";
 
 type ParallaxProps = {
   children: ReactNode;
@@ -26,20 +27,18 @@ export function Parallax({
 }: ParallaxProps) {
   const ref = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
+  const isDesktop = useIsDesktop();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
-  const y = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [distance, -distance]
-  );
+  const y = useTransform(scrollYProgress, [0, 1], [distance, -distance]);
+  const enabled = isDesktop && !reduce;
 
   return (
     <motion.div
       ref={ref}
-      style={reduce ? undefined : { y }}
+      style={enabled ? { y } : undefined}
       className={className}
     >
       {children}

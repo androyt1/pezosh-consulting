@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { Button } from "./ui/Button";
 import { CountUp } from "./ui/CountUp";
+import { useIsDesktop } from "@/lib/use-is-desktop";
 import { stats } from "@/lib/content";
 
 const trustPoints = [
@@ -46,11 +47,13 @@ const floatingCards = [
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
+  const isDesktop = useIsDesktop();
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
+  const parallax = isDesktop && !reduce;
 
   return (
     <section
@@ -60,7 +63,7 @@ export function Hero() {
     >
       {/* Background photo + overlays (parallax) */}
       <motion.div
-        style={reduce ? undefined : { y: bgY }}
+        style={parallax ? { y: bgY } : undefined}
         className="absolute inset-0"
       >
         <Image
@@ -80,9 +83,9 @@ export function Hero() {
         aria-hidden
         className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay"
       />
-      <div className="absolute -left-32 top-0 h-[28rem] w-[28rem] rounded-full bg-safety-500/20 blur-[120px]" />
-      <div className="absolute -right-20 bottom-0 h-[26rem] w-[26rem] rounded-full bg-safe-green/15 blur-[120px]" />
-      <div className="absolute right-1/3 top-1/4 h-72 w-72 rounded-full bg-amber-accent/10 blur-[100px]" />
+      <div className="absolute -left-32 top-0 hidden h-[28rem] w-[28rem] rounded-full bg-safety-500/20 blur-[120px] sm:block" />
+      <div className="absolute -right-20 bottom-0 hidden h-[26rem] w-[26rem] rounded-full bg-safe-green/15 blur-[120px] sm:block" />
+      <div className="absolute right-1/3 top-1/4 hidden h-72 w-72 rounded-full bg-amber-accent/10 blur-[100px] sm:block" />
 
       <div className="container-px relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         {/* Left: copy */}
@@ -165,7 +168,7 @@ export function Hero() {
           className="relative mx-auto w-full max-w-md"
         >
           {/* Main certificate-style card */}
-          <div className="relative rounded-3xl border border-white/10 bg-white/[0.06] p-6 shadow-2xl backdrop-blur-xl">
+          <div className="relative rounded-3xl border border-white/10 bg-navy-900/80 p-6 shadow-2xl backdrop-blur-xl md:bg-white/[0.06]">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-safety-500 to-safety-600">

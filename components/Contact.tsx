@@ -92,7 +92,7 @@ export function Contact() {
         aria-hidden
         className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"
       />
-      <div className="absolute -left-20 top-1/3 h-80 w-80 rounded-full bg-safety-500/20 blur-[130px]" />
+      <div className="absolute -left-20 top-1/3 hidden h-80 w-80 rounded-full bg-safety-500/20 blur-[130px] sm:block" />
 
       <div className="container-px relative mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">

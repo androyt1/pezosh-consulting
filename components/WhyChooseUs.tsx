@@ -12,15 +12,18 @@ import { whyChooseUs } from "@/lib/content";
 import { SectionHeading } from "./ui/SectionHeading";
 import { Button } from "./ui/Button";
 import { staggerContainer, staggerItem } from "./ui/Reveal";
+import { useIsDesktop } from "@/lib/use-is-desktop";
 
 export function WhyChooseUs() {
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
+  const isDesktop = useIsDesktop();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
   const bgY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+  const parallax = isDesktop && !reduce;
 
   return (
     <section
@@ -28,7 +31,7 @@ export function WhyChooseUs() {
       className="relative overflow-hidden bg-navy-950 py-20 text-white lg:py-28"
     >
       <motion.div
-        style={reduce ? undefined : { y: bgY }}
+        style={parallax ? { y: bgY } : undefined}
         className="absolute inset-0"
       >
         <Image
@@ -46,8 +49,8 @@ export function WhyChooseUs() {
         aria-hidden
         className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"
       />
-      <div className="absolute -right-24 top-1/4 h-96 w-96 rounded-full bg-safety-500/20 blur-[130px]" />
-      <div className="absolute -left-20 bottom-0 h-80 w-80 rounded-full bg-safe-green/10 blur-[120px]" />
+      <div className="absolute -right-24 top-1/4 hidden h-96 w-96 rounded-full bg-safety-500/20 blur-[130px] sm:block" />
+      <div className="absolute -left-20 bottom-0 hidden h-80 w-80 rounded-full bg-safe-green/10 blur-[120px] sm:block" />
 
       <div className="container-px relative mx-auto max-w-7xl">
         <SectionHeading

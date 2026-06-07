@@ -10,16 +10,19 @@ import {
 } from "framer-motion";
 import { Phone, ShieldCheck } from "lucide-react";
 import { Button } from "./ui/Button";
+import { useIsDesktop } from "@/lib/use-is-desktop";
 import { site } from "@/lib/site";
 
 export function CtaBanner() {
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
+  const isDesktop = useIsDesktop();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
   const bgY = useTransform(scrollYProgress, [0, 1], ["-12%", "12%"]);
+  const parallax = isDesktop && !reduce;
 
   return (
     <section
@@ -27,7 +30,7 @@ export function CtaBanner() {
       className="relative overflow-hidden bg-navy-950 py-24 text-white lg:py-32"
     >
       <motion.div
-        style={reduce ? undefined : { y: bgY }}
+        style={parallax ? { y: bgY } : undefined}
         className="absolute inset-0"
       >
         <Image
@@ -44,7 +47,7 @@ export function CtaBanner() {
         aria-hidden
         className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay"
       />
-      <div className="absolute -left-20 top-1/3 h-80 w-80 rounded-full bg-safety-500/25 blur-[130px]" />
+      <div className="absolute -left-20 top-1/3 hidden h-80 w-80 rounded-full bg-safety-500/25 blur-[130px] sm:block" />
 
       <div className="container-px relative mx-auto max-w-7xl">
         <motion.div
