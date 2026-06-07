@@ -251,6 +251,11 @@
     -webkit-backdrop-filter: none !important;
   }
 
+  /* mix-blend-mode forces costly offscreen compositing during scroll */
+  .noise-overlay {
+    display: none !important;
+  }
+
   .cta-pulse {
     animation: none !important;
   }

@@ -225,8 +225,10 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Floating mini cards */}
-          {floatingCards.map(({ icon: Icon, label, className, delay }) => (
+          {/* Floating mini cards — desktop only (avoid running infinite
+              animations on hidden elements / low-end mobile) */}
+          {isDesktop &&
+            floatingCards.map(({ icon: Icon, label, className, delay }) => (
             <motion.div
               key={label}
               initial={{ opacity: 0, scale: 0.6 }}
