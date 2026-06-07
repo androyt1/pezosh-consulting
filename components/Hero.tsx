@@ -8,15 +8,7 @@ import {
   useTransform,
   useReducedMotion,
 } from "framer-motion";
-import {
-  ShieldCheck,
-  Award,
-  HardHat,
-  Flame,
-  HeartPulse,
-  Star,
-  CheckCircle2,
-} from "lucide-react";
+import { ShieldCheck, Award, Star, CheckCircle2 } from "lucide-react";
 import { Button } from "./ui/Button";
 import { CountUp } from "./ui/CountUp";
 import { useIsDesktop } from "@/lib/use-is-desktop";
@@ -26,22 +18,6 @@ const trustPoints = [
   "Industry-aligned certification",
   "Hands-on practical training",
   "Nationwide corporate delivery",
-];
-
-const floatingCards = [
-  { icon: Flame, label: "Fire Safety", className: "left-3 -top-11", delay: 0.2 },
-  {
-    icon: HeartPulse,
-    label: "First Aid",
-    className: "right-3 -top-11",
-    delay: 0.4,
-  },
-  {
-    icon: HardHat,
-    label: "Construction",
-    className: "left-10 -bottom-10",
-    delay: 0.6,
-  },
 ];
 
 export function Hero() {
@@ -75,17 +51,17 @@ export function Hero() {
           className="scale-[1.18] object-cover object-center"
         />
       </motion.div>
-      <div className="absolute inset-0 bg-navy-950/35" />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/60 to-navy-950/10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-navy-950/25" />
-      <div className="absolute inset-0 bg-grid opacity-25" />
+      {/* ~60% dark overlay, with extra depth on the left (headline) and bottom (stats) */}
+      <div className="absolute inset-0 bg-navy-950/60" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-950/75 via-navy-950/35 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy-950/75 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-grid opacity-20" />
       <div
         aria-hidden
         className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay"
       />
-      <div className="absolute -left-32 top-0 hidden h-[28rem] w-[28rem] rounded-full bg-safety-500/20 blur-[120px] sm:block" />
-      <div className="absolute -right-20 bottom-0 hidden h-[26rem] w-[26rem] rounded-full bg-safe-green/15 blur-[120px] sm:block" />
-      <div className="absolute right-1/3 top-1/4 hidden h-72 w-72 rounded-full bg-amber-accent/10 blur-[100px] sm:block" />
+      <div className="absolute -left-32 top-0 hidden h-[28rem] w-[28rem] rounded-full bg-navy-400/15 blur-[120px] sm:block" />
+      <div className="absolute -right-20 bottom-0 hidden h-[26rem] w-[26rem] rounded-full bg-safe-green/12 blur-[120px] sm:block" />
 
       <div className="container-px relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         {/* Left: copy */}
@@ -104,7 +80,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.08 }}
-            className="mt-6 text-4xl font-extrabold leading-[1.08] text-white sm:text-5xl lg:text-[3.4rem]"
+            className="mt-6 text-4xl font-extrabold leading-[1.18] text-white sm:text-5xl lg:text-[3.4rem]"
           >
             Professional HSE Training &{" "}
             <span className="text-gradient-safety">Safety Certification</span>{" "}
@@ -171,7 +147,7 @@ export function Hero() {
           <div className="relative rounded-3xl border border-white/10 bg-navy-900/80 p-6 shadow-2xl backdrop-blur-xl md:bg-white/[0.06]">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-safety-500 to-safety-600">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl border border-white/15 bg-white/10">
                   <ShieldCheck className="h-7 w-7 text-white" />
                 </span>
                 <div>
@@ -206,7 +182,7 @@ export function Hero() {
                         delay: 0.6 + i * 0.15,
                         ease: "easeOut",
                       }}
-                      className="h-full rounded-full bg-gradient-to-r from-safety-500 to-amber-accent"
+                      className="h-full rounded-full bg-gradient-to-r from-amber-accent to-amber-bright"
                     />
                   </div>
                 </div>
@@ -224,31 +200,6 @@ export function Hero() {
               </p>
             </div>
           </div>
-
-          {/* Floating mini cards — desktop only (avoid running infinite
-              animations on hidden elements / low-end mobile) */}
-          {isDesktop &&
-            floatingCards.map(({ icon: Icon, label, className, delay }) => (
-            <motion.div
-              key={label}
-              initial={{ opacity: 0, scale: 0.6 }}
-              animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
-              transition={{
-                opacity: { duration: 0.5, delay },
-                scale: { duration: 0.5, delay },
-                y: {
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay,
-                },
-              }}
-              className={`absolute z-10 hidden items-center gap-2 rounded-2xl border border-white/15 bg-navy-900/80 px-3.5 py-2.5 shadow-xl backdrop-blur sm:flex ${className}`}
-            >
-              <Icon className="h-5 w-5 text-safety-400" />
-              <span className="text-xs font-semibold text-white">{label}</span>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
 
