@@ -331,8 +331,85 @@ export const faqs: Faq[] = [
       "We design site-specific HSE plans, develop policies and procedures, conduct compliance audits and provide ongoing safety advisory to keep your workplace aligned with HSE regulations.",
   },
   {
+    question: "Will I receive a verifiable certificate?",
+    answer:
+      "Yes. On successful completion and assessment, you receive a verifiable certificate of competence that employers and clients can confirm directly with us — proof of the standards your training was benchmarked against.",
+  },
+  {
     question: "How do I enrol or request a consultation?",
     answer:
       "Simply use the contact form, call us on +234 805 993 8598 or email oukhuriegbe@gmail.com. Our coordinator will guide you on schedules, fees and the best program for your needs.",
+  },
+];
+
+export type Standard = {
+  abbr: string;
+  label: string;
+};
+
+// Internationally recognised OH&S standards and frameworks our programmes are
+// structured around and benchmarked against (not direct accreditation claims).
+export const standards: Standard[] = [
+  { abbr: "ISO 45001", label: "OH&S Management" },
+  { abbr: "NEBOSH", label: "Exam-aligned" },
+  { abbr: "IOSH", label: "Managing Safely" },
+  { abbr: "OSHA", label: "US OSH Standards" },
+  { abbr: "WSO", label: "World Safety Org." },
+  { abbr: "ISPON", label: "Nigeria HSE Body" },
+  { abbr: "ISO 14001", label: "Environmental" },
+  { abbr: "First Aid / CPR", label: "Emergency Response" },
+];
+
+export type Session = {
+  month: string;
+  day: string;
+  course: string;
+  duration: string;
+  mode: string;
+};
+
+// Upcoming open-enrolment batches (update each month / replace with live calendar).
+export const schedule: Session[] = [
+  {
+    month: "JUN",
+    day: "23",
+    course: "HSE Levels 1, 2 & 3",
+    duration: "5 Days",
+    mode: "Classroom & Online",
+  },
+  {
+    month: "JUL",
+    day: "07",
+    course: "First Aid & CPR Certification",
+    duration: "2 Days",
+    mode: "Classroom",
+  },
+  {
+    month: "JUL",
+    day: "14",
+    course: "Fire Safety & Warden Training",
+    duration: "2 Days",
+    mode: "Classroom",
+  },
+  {
+    month: "JUL",
+    day: "21",
+    course: "Working at Height",
+    duration: "2 Days",
+    mode: "Classroom",
+  },
+  {
+    month: "AUG",
+    day: "04",
+    course: "Oil & Gas Safety Management",
+    duration: "5 Days",
+    mode: "Hybrid",
+  },
+  {
+    month: "AUG",
+    day: "18",
+    course: "Confined Space Entry",
+    duration: "2 Days",
+    mode: "Classroom",
   },
 ];

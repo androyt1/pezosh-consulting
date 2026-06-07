@@ -3,7 +3,9 @@ import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { About } from "@/components/About";
+import { Accreditations } from "@/components/Accreditations";
 import { Courses } from "@/components/Courses";
+import { Schedule } from "@/components/Schedule";
 import { Services } from "@/components/Services";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { Industries } from "@/components/Industries";
@@ -24,7 +26,9 @@ export default function Home() {
         <Hero />
         <Marquee />
         <About />
+        <Accreditations />
         <Courses />
+        <Schedule />
         <Services />
         <WhyChooseUs />
         <Industries />

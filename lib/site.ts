@@ -22,9 +22,10 @@ export const nav = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Courses", href: "#courses" },
+  { label: "Schedule", href: "#schedule" },
   { label: "Services", href: "#services" },
   { label: "Industries", href: "#industries" },
-  { label: "PPE Procurement", href: "#ppe" },
+  { label: "PPE", href: "#ppe" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ] as const;
