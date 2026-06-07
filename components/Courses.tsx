@@ -30,7 +30,7 @@ export function Courses() {
             <motion.article
               key={course.title}
               variants={staggerItem}
-              className="group relative flex flex-col overflow-hidden rounded-3xl border border-navy-100 bg-white shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-safety-200 hover:shadow-glow"
+              className="group relative flex flex-col overflow-hidden rounded-3xl border border-navy-100 bg-white shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-navy-200 hover:shadow-glow"
             >
               {/* Thumbnail */}
               <div className="relative h-44 overflow-hidden">

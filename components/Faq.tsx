@@ -30,7 +30,7 @@ export function Faq() {
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4, delay: i * 0.04 }}
                 className={`overflow-hidden rounded-2xl border bg-white transition-colors ${
-                  isOpen ? "border-safety-200 shadow-card" : "border-navy-100"
+                  isOpen ? "border-navy-200 shadow-card" : "border-navy-100"
                 }`}
               >
                 <button
@@ -45,7 +45,7 @@ export function Faq() {
                   <span
                     className={`grid h-8 w-8 shrink-0 place-items-center rounded-full transition-all duration-300 ${
                       isOpen
-                        ? "rotate-45 bg-safety-500 text-white"
+                        ? "rotate-45 bg-navy-900 text-white"
                         : "bg-navy-50 text-navy-700"
                     }`}
                   >

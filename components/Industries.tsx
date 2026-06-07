@@ -28,7 +28,7 @@ export function Industries() {
               variants={staggerItem}
               className="group flex items-center gap-4 rounded-2xl border border-navy-100 bg-navy-50/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-safety-200 hover:bg-white hover:shadow-card"
             >
-              <span className="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-white p-3 text-navy-700 shadow-sm transition-colors duration-300 group-hover:bg-safety-500 group-hover:text-white">
+              <span className="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-white p-3 text-navy-700 shadow-sm transition-colors duration-300 group-hover:bg-navy-900 group-hover:text-white">
                 <industry.icon className="h-6 w-6" strokeWidth={1.9} />
               </span>
               <span className="text-sm font-bold text-navy-900 sm:text-base">

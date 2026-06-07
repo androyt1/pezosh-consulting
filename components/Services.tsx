@@ -33,7 +33,7 @@ export function Services() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/75 via-transparent to-transparent" />
                 <div className="absolute inset-x-5 bottom-5 flex items-center gap-3 rounded-2xl border border-white/15 bg-navy-950/70 p-4 backdrop-blur">
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-safety-500 text-white">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/10 text-white">
                     <ShieldCheck className="h-5 w-5" />
                   </span>
                   <p className="text-sm font-medium text-white">
@@ -91,7 +91,7 @@ export function Services() {
               className="group relative overflow-hidden rounded-3xl border border-navy-100 bg-gradient-to-br from-white to-navy-50/40 p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-glow"
             >
               <div className="flex items-start gap-5">
-                <span className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-safety-500 to-safety-600 text-white shadow-[0_12px_28px_-10px_rgba(249,97,10,0.7)] transition-transform duration-300 group-hover:scale-105">
+                <span className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-navy-700 to-navy-900 text-white shadow-[0_12px_28px_-10px_rgba(10,24,52,0.5)] transition-transform duration-300 group-hover:scale-105">
                   <service.icon className="h-8 w-8" strokeWidth={1.9} />
                 </span>
                 <div className="flex-1">

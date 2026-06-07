@@ -35,11 +35,11 @@ export function Marquee() {
       <div className="flex w-max animate-marquee items-center gap-10 pr-10 pause-on-hover">
         {track.map((item, i) => (
           <div key={i} className="flex items-center gap-3 whitespace-nowrap">
-            <item.icon className="h-5 w-5 shrink-0 text-safety-400" />
+            <item.icon className="h-5 w-5 shrink-0 text-amber-bright" />
             <span className="text-sm font-semibold tracking-wide text-navy-100">
               {item.label}
             </span>
-            <span className="ml-7 h-1.5 w-1.5 rounded-full bg-safety-500/70" />
+            <span className="ml-7 h-1.5 w-1.5 rounded-full bg-white/30" />
           </div>
         ))}
       </div>

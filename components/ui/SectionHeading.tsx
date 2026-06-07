@@ -28,7 +28,7 @@ export function SectionHeading({
               : "border-safety-200 bg-safety-50 text-safety-700"
           }`}
         >
-          <span className="hazard-stripe h-3 w-6 rounded-sm" />
+          <span className="h-1.5 w-1.5 rounded-full bg-safety-500" />
           {eyebrow}
         </span>
       </Reveal>

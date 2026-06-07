@@ -49,7 +49,7 @@ export function WhyChooseUs() {
         aria-hidden
         className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"
       />
-      <div className="absolute -right-24 top-1/4 hidden h-96 w-96 rounded-full bg-safety-500/20 blur-[130px] sm:block" />
+      <div className="absolute -right-24 top-1/4 hidden h-96 w-96 rounded-full bg-navy-400/15 blur-[130px] sm:block" />
       <div className="absolute -left-20 bottom-0 hidden h-80 w-80 rounded-full bg-safe-green/10 blur-[120px] sm:block" />
 
       <div className="container-px relative mx-auto max-w-7xl">
@@ -71,12 +71,12 @@ export function WhyChooseUs() {
             <motion.div
               key={item.title}
               variants={staggerItem}
-              className="group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur transition-all duration-300 hover:-translate-y-1.5 hover:border-safety-400/40 hover:bg-white/[0.07]"
+              className="group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur transition-all duration-300 hover:-translate-y-1.5 hover:border-white/25 hover:bg-white/[0.07]"
             >
-              <span className="absolute right-5 top-4 text-5xl font-black text-white/5 transition-colors group-hover:text-safety-500/20">
+              <span className="absolute right-5 top-4 text-5xl font-black text-white/5 transition-colors group-hover:text-white/15">
                 0{i + 1}
               </span>
-              <span className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-safety-500 to-safety-600 text-white shadow-lg">
+              <span className="grid h-14 w-14 place-items-center rounded-2xl border border-white/10 bg-white/10 text-white shadow-lg">
                 <item.icon className="h-7 w-7" strokeWidth={2} />
               </span>
               <h3 className="mt-5 text-lg font-bold text-white">{item.title}</h3>
@@ -87,7 +87,7 @@ export function WhyChooseUs() {
           ))}
         </motion.div>
 
-        <div className="mt-14 flex flex-col items-center gap-5 rounded-3xl border border-white/10 bg-gradient-to-r from-safety-500/15 to-amber-accent/10 p-8 text-center backdrop-blur sm:flex-row sm:justify-between sm:text-left">
+        <div className="mt-14 flex flex-col items-center gap-5 rounded-3xl border border-white/10 bg-white/[0.05] p-8 text-center backdrop-blur sm:flex-row sm:justify-between sm:text-left">
           <div className="max-w-xl">
             <h3 className="text-2xl font-bold text-white">
               Ready to raise your safety standards?

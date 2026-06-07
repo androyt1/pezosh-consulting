@@ -225,12 +225,6 @@ export function Hero() {
           ))}
         </div>
       </motion.div>
-
-      {/* Signature hazard-stripe edge */}
-      <div
-        aria-hidden
-        className="hazard-stripe hazard-stripe-animated absolute inset-x-0 bottom-0 z-20 h-2.5"
-      />
     </section>
   );
 }

@@ -41,8 +41,8 @@ export function About() {
           {/* Visual side */}
           <Reveal className="order-2 lg:order-1">
             <div className="relative px-2 sm:px-6 lg:px-2">
-              <div className="absolute -left-3 -top-4 h-24 w-24 rounded-2xl border-[6px] border-safety-100" />
-              <div className="absolute -bottom-5 -right-3 h-28 w-28 rounded-full bg-amber-accent/15" />
+              <div className="absolute -left-3 -top-4 h-24 w-24 rounded-2xl border-[6px] border-navy-100" />
+              <div className="absolute -bottom-5 -right-3 h-28 w-28 rounded-full bg-navy-100/60" />
 
               <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-card">
                 <Parallax distance={28} className="absolute inset-0">
@@ -76,7 +76,7 @@ export function About() {
               </div>
 
               <div className="absolute -left-1 bottom-10 flex items-center gap-3 rounded-2xl border border-navy-100 bg-white/95 p-4 shadow-glow backdrop-blur sm:left-2">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-safety-50 text-safety-600">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-navy-900 text-white">
                   <TrendingUp className="h-6 w-6" />
                 </span>
                 <div>
@@ -103,7 +103,7 @@ export function About() {
               {pillars.map((p, i) => (
                 <Reveal key={p.title} delay={i * 0.1}>
                   <div className="h-full rounded-2xl border border-navy-100 bg-white p-6 shadow-card transition-shadow hover:shadow-glow">
-                    <span className="grid h-11 w-11 place-items-center rounded-xl bg-safety-50 text-safety-600">
+                    <span className="grid h-11 w-11 place-items-center rounded-xl bg-navy-900 text-white">
                       <p.icon className="h-6 w-6" />
                     </span>
                     <h3 className="mt-4 text-lg font-bold text-navy-900">
@@ -124,7 +124,7 @@ export function About() {
                     key={h.label}
                     className="flex items-center gap-2 text-sm font-semibold text-navy-800"
                   >
-                    <h.icon className="h-5 w-5 text-safety-500" />
+                    <h.icon className="h-5 w-5 text-navy-700" />
                     {h.label}
                   </span>
                 ))}

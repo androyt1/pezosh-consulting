@@ -8,7 +8,6 @@ import { Services } from "@/components/Services";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { Industries } from "@/components/Industries";
 import { CtaBanner } from "@/components/CtaBanner";
-import { HazardDivider } from "@/components/ui/HazardDivider";
 import { Ppe } from "@/components/Ppe";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
@@ -29,13 +28,10 @@ export default function Home() {
         <Services />
         <WhyChooseUs />
         <Industries />
-        <HazardDivider />
         <CtaBanner />
-        <HazardDivider />
         <Ppe />
         <Testimonials />
         <Faq />
-        <HazardDivider />
         <Contact />
       </main>
       <Footer />

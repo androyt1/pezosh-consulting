@@ -1,13 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  PackageCheck,
-  BadgeCheck,
-  Truck,
-  Wallet,
-  ShieldCheck,
-} from "lucide-react";
+import { BadgeCheck, Truck, Wallet, ShieldCheck } from "lucide-react";
 import { ppeItems } from "@/lib/content";
 import { SectionHeading } from "./ui/SectionHeading";
 import { Button } from "./ui/Button";
@@ -71,10 +65,10 @@ export function Ppe() {
                 variants={staggerItem}
                 className="group flex flex-col rounded-2xl border border-navy-100 bg-white p-5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-safe-green/40 hover:shadow-glow"
               >
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-navy-900 text-white transition-colors duration-300 group-hover:bg-safe-green">
-                  <PackageCheck className="h-5 w-5" />
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-navy-700 to-navy-900 text-white transition-colors duration-300 group-hover:from-safe-green group-hover:to-safe-green-dark">
+                  <item.icon className="h-5 w-5" />
                 </span>
-                <p className="mt-4 text-[0.7rem] font-bold uppercase tracking-wide text-safety-600">
+                <p className="mt-4 text-[0.7rem] font-bold uppercase tracking-wide text-navy-400">
                   {item.category}
                 </p>
                 <p className="mt-1 text-sm font-semibold leading-snug text-navy-900">

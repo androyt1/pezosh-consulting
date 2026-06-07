@@ -123,20 +123,6 @@
     font-family: var(--font-display);
   }
 
-  /* Signature HSE hazard-stripe motif */
-  .hazard-stripe {
-    background-image: repeating-linear-gradient(
-      -45deg,
-      var(--color-amber-accent) 0 16px,
-      var(--color-navy-950) 16px 32px
-    );
-    background-size: 45.25px 45.25px;
-  }
-
-  .hazard-stripe-animated {
-    animation: hazard-scroll 2.4s linear infinite;
-  }
-
   /* Tactile film-grain texture overlay */
   .noise-overlay {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -204,12 +190,6 @@
   }
 }
 
-@keyframes hazard-scroll {
-  to {
-    background-position: 45.25px 0;
-  }
-}
-
 @keyframes cta-pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(249, 97, 10, 0.55);
@@ -261,10 +241,6 @@
   }
 
   .text-gradient-safety {
-    animation: none;
-  }
-
-  .hazard-stripe-animated {
     animation: none;
   }
 }

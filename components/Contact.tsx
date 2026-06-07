@@ -92,7 +92,7 @@ export function Contact() {
         aria-hidden
         className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"
       />
-      <div className="absolute -left-20 top-1/3 hidden h-80 w-80 rounded-full bg-safety-500/20 blur-[130px] sm:block" />
+      <div className="absolute -left-20 top-1/3 hidden h-80 w-80 rounded-full bg-navy-400/15 blur-[130px] sm:block" />
 
       <div className="container-px relative mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
@@ -110,7 +110,7 @@ export function Contact() {
               {contactCards.map((card, i) => {
                 const inner = (
                   <div className="flex h-full items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.05] p-5 backdrop-blur transition-colors duration-300 hover:border-safety-400/40 hover:bg-white/[0.08]">
-                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-safety-500 to-safety-600 text-white">
+                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-navy-700 to-navy-900 text-white">
                       <card.icon className="h-5 w-5" />
                     </span>
                     <div>

@@ -24,11 +24,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden bg-navy-950 text-navy-200">
-      <div
-        aria-hidden
-        className="hazard-stripe hazard-stripe-animated h-2 w-full"
-      />
+    <footer className="relative overflow-hidden border-t border-white/10 bg-navy-950 text-navy-200">
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div
         aria-hidden
@@ -52,7 +48,7 @@ export function Footer() {
                   aria-label={s.label}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 text-navy-200 transition-colors hover:border-safety-400/40 hover:bg-safety-500 hover:text-white"
+                  className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 text-navy-200 transition-colors hover:border-white/25 hover:bg-white/15 hover:text-white"
                 >
                   <s.icon className="h-5 w-5" />
                 </a>

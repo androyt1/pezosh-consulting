@@ -22,6 +22,17 @@ import {
   Pickaxe,
   Hospital,
   Truck,
+  Glasses,
+  Ear,
+  Wind,
+  Shirt,
+  Hand,
+  Footprints,
+  Anchor,
+  FireExtinguisher,
+  BriefcaseMedical,
+  Radar,
+  TrafficCone,
 } from "lucide-react";
 
 export type Course = {
@@ -192,21 +203,22 @@ export const industries: Industry[] = [
 export type Ppe = {
   name: string;
   category: string;
+  icon: LucideIcon;
 };
 
 export const ppeItems: Ppe[] = [
-  { name: "Safety Helmets & Hard Hats", category: "Head Protection" },
-  { name: "Safety Goggles & Face Shields", category: "Eye & Face" },
-  { name: "Ear Plugs & Defenders", category: "Hearing" },
-  { name: "Respirators & Dust Masks", category: "Respiratory" },
-  { name: "Hi-Vis Vests & Coveralls", category: "Body Protection" },
-  { name: "Safety Gloves", category: "Hand Protection" },
-  { name: "Safety Boots", category: "Foot Protection" },
-  { name: "Fall Arrest Harnesses", category: "Height Safety" },
-  { name: "Fire Extinguishers", category: "Fire Safety" },
-  { name: "First Aid Kits", category: "Medical" },
-  { name: "Gas Detectors", category: "Detection" },
-  { name: "Safety Signage & Barriers", category: "Site Control" },
+  { name: "Safety Helmets & Hard Hats", category: "Head Protection", icon: HardHat },
+  { name: "Safety Goggles & Face Shields", category: "Eye & Face", icon: Glasses },
+  { name: "Ear Plugs & Defenders", category: "Hearing", icon: Ear },
+  { name: "Respirators & Dust Masks", category: "Respiratory", icon: Wind },
+  { name: "Hi-Vis Vests & Coveralls", category: "Body Protection", icon: Shirt },
+  { name: "Safety Gloves", category: "Hand Protection", icon: Hand },
+  { name: "Safety Boots", category: "Foot Protection", icon: Footprints },
+  { name: "Fall Arrest Harnesses", category: "Height Safety", icon: Anchor },
+  { name: "Fire Extinguishers", category: "Fire Safety", icon: FireExtinguisher },
+  { name: "First Aid Kits", category: "Medical", icon: BriefcaseMedical },
+  { name: "Gas Detectors", category: "Detection", icon: Radar },
+  { name: "Safety Signage & Barriers", category: "Site Control", icon: TrafficCone },
 ];
 
 export type WhyItem = {
