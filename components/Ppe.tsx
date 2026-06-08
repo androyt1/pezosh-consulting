@@ -45,7 +45,7 @@ export function Ppe() {
 
             <Reveal delay={0.2}>
               <div className="mt-8">
-                <Button href="#contact" variant="green" size="lg" withArrow>
+                <Button href="#contact" variant="primary" size="lg" withArrow>
                   Request a PPE Quote
                 </Button>
               </div>

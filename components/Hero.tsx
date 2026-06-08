@@ -70,7 +70,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-amber-bright backdrop-blur"
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-safe-green-light backdrop-blur"
           >
             <Award className="h-4 w-4" />
             Trusted HSE Training in Nigeria
@@ -113,7 +113,7 @@ export function Hero() {
             >
               Enroll for Training
             </Button>
-            <Button href="#contact" variant="green" size="lg">
+            <Button href="#contact" variant="ghost" size="lg">
               Request HSE Consultation
             </Button>
           </motion.div>
@@ -171,7 +171,7 @@ export function Hero() {
                 <div key={row.label}>
                   <div className="mb-1 flex justify-between text-xs font-medium text-navy-100">
                     <span>{row.label}</span>
-                    <span className="text-amber-bright">{row.val}%</span>
+                    <span className="text-safe-green-light">{row.val}%</span>
                   </div>
                   <div className="h-2 overflow-hidden rounded-full bg-white/10">
                     <motion.div
@@ -182,7 +182,7 @@ export function Hero() {
                         delay: 0.6 + i * 0.15,
                         ease: "easeOut",
                       }}
-                      className="h-full rounded-full bg-gradient-to-r from-amber-accent to-amber-bright"
+                      className="h-full rounded-full bg-gradient-to-r from-safety-400 to-safe-green-light"
                     />
                   </div>
                 </div>

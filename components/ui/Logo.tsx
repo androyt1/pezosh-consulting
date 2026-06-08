@@ -22,14 +22,14 @@ export function Logo({ tone = "onDark", href = "#home", className = "" }: LogoPr
       <span className="relative grid h-10 w-10 shrink-0 place-items-center">
         <svg
           viewBox="0 0 48 48"
-          className="h-10 w-10 drop-shadow-[0_8px_16px_rgba(249,97,10,0.35)] transition-transform duration-300 group-hover:-rotate-6"
+          className="h-10 w-10 drop-shadow-[0_8px_16px_rgba(22,163,74,0.35)] transition-transform duration-300 group-hover:-rotate-6"
           aria-hidden
         >
           <defs>
             <linearGradient id="pezosh-mark" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stopColor="#ff7a2e" />
-              <stop offset="0.55" stopColor="#f9610a" />
-              <stop offset="1" stopColor="#e44c00" />
+              <stop offset="0" stopColor="#32d583" />
+              <stop offset="0.55" stopColor="#16a34a" />
+              <stop offset="1" stopColor="#15803d" />
             </linearGradient>
           </defs>
           {/* Hexagon safety badge */}
@@ -40,7 +40,7 @@ export function Logo({ tone = "onDark", href = "#home", className = "" }: LogoPr
           <path
             d="M24 1.8 43.2 12.9V35.1L24 46.2 4.8 35.1V12.9Z"
             fill="none"
-            stroke="#fbbf24"
+            stroke="#6ee7b7"
             strokeWidth="1.4"
             strokeOpacity="0.6"
           />
@@ -71,7 +71,7 @@ export function Logo({ tone = "onDark", href = "#home", className = "" }: LogoPr
         </span>
         <span
           className={`text-[0.62rem] font-semibold uppercase tracking-[0.3em] ${
-            onDark ? "text-amber-bright" : "text-safety-600"
+            onDark ? "text-safe-green-light" : "text-safety-600"
           }`}
         >
           Consulting

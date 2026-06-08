@@ -114,7 +114,7 @@ export function Contact() {
                       <card.icon className="h-5 w-5" />
                     </span>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wide text-amber-bright">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-safe-green-light">
                         {card.label}
                       </p>
                       <p className="mt-0.5 text-sm font-medium text-white">
@@ -293,7 +293,7 @@ export function Contact() {
 
                   <button
                     type="submit"
-                    className="group mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-safety-500 px-7 py-3.5 text-base font-semibold text-white shadow-[0_12px_30px_-10px_rgba(249,97,10,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-safety-600 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-safety-500/40"
+                    className="group mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-safety-500 px-7 py-3.5 text-base font-semibold text-white shadow-[0_12px_30px_-10px_rgba(22,163,74,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-safety-600 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-safety-500/40"
                   >
                     Send Enquiry
                     <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

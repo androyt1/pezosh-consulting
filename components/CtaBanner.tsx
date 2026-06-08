@@ -57,7 +57,7 @@ export function CtaBanner() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-amber-bright backdrop-blur">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-safe-green-light backdrop-blur">
             <ShieldCheck className="h-4 w-4" />
             Safety Is Not Optional
           </span>

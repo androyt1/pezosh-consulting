@@ -55,7 +55,7 @@ export function About() {
                   />
                 </Parallax>
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent" />
-                <span className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-navy-950/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-bright backdrop-blur">
+                <span className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-navy-950/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-safe-green-light backdrop-blur">
                   <ShieldCheck className="h-4 w-4" />
                   Safety First, Always
                 </span>

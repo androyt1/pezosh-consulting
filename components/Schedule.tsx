@@ -32,7 +32,7 @@ export function Schedule() {
             >
               {/* Date chip */}
               <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-xl bg-gradient-to-br from-navy-800 to-navy-950 text-white">
-                <span className="text-[0.65rem] font-bold uppercase tracking-widest text-amber-bright">
+                <span className="text-[0.65rem] font-bold uppercase tracking-widest text-safe-green-light">
                   {s.month}
                 </span>
                 <span className="font-display text-2xl font-bold leading-none">

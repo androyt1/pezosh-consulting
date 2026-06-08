@@ -24,7 +24,7 @@ export function SectionHeading({
         <span
           className={`inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] ${
             light
-              ? "border-white/20 bg-white/10 text-amber-bright"
+              ? "border-white/20 bg-white/10 text-safe-green-light"
               : "border-safety-200 bg-safety-50 text-safety-700"
           }`}
         >
